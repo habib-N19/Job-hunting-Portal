@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         'default-color': '#757575',
-        'active': 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)'
+        // 'activeClr': 'gradient(linear, 90deg, #7E90FE 0%, #9873FF 100%)'
+        'testing': '#ffffff'
       },
     }
   },
