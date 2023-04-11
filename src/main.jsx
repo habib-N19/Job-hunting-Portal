@@ -8,6 +8,7 @@ import Statistics from './components/Statistics/Statistics'
 import AppliedJob from './components/AppliedJob/AppliedJob'
 import Blog from './components/Blog/Blog'
 import { featuredCardData } from './loaders/getFeaturedData'
+import JobDetails from './components/JobDetails/JobDetails'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,16 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: 'job/:jobId',
+        element: <JobDetails></JobDetails>,
+        loader: ({ params }) => {
+          const { jobId } = params
+          return fetch('/featuredJobs.json')
+            .then(response => response.json())
+            .then(jobs => jobs.find(job => job.id === jobId))
+        }
       },
       {
         path: '/statistics',

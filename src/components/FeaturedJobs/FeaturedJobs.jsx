@@ -1,9 +1,14 @@
 import { FeaturedContext } from '../../App'
 import React, { useContext } from 'react'
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
+import { useNavigate } from 'react-router-dom'
 const FeaturedJobs = () => {
   const featuredData = useContext(FeaturedContext)
-  console.log(typeof featuredData)
+  const navigate = useNavigate()
+  const handleJobDetails = id => {
+    navigate(`/job/${id}`)
+  }
+  //   console.log(typeof featuredData)
   return (
     <div className='w-11/12 mx-auto'>
       <h2 className='text-4xl text-center font-bold mb-4'>Featured Jobs</h2>
@@ -43,7 +48,12 @@ const FeaturedJobs = () => {
                 {fData.salary}
               </span>
             </div>
-            <button className='my-btn-primary mb-8'>View Details</button>
+            <button
+              onClick={() => handleJobDetails(fData.id)}
+              className='my-btn-primary mb-8'
+            >
+              View Details
+            </button>
           </div>
         ))}
       </div>
