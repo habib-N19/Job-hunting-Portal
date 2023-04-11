@@ -1,4 +1,3 @@
-import React from 'react'
 import Lottie from 'lottie-react'
 import bannerAnimation from '../../assets/job-hunting.json'
 import JobCategory from '../JobCategory/JobCategory'
@@ -6,10 +5,7 @@ import FeaturedJobs from '../FeaturedJobs/FeaturedJobs'
 import { useLoaderData } from 'react-router-dom'
 
 const Home = () => {
-  const jobCategoryData = useLoaderData()
-  //   console.log(typeof jobCategory)
-  console.log(jobCategoryData)
-
+  //   console.log(typeof featuredData)
   return (
     <div className='w-11/12 mx-auto'>
       {/* banner section */}
@@ -33,8 +29,7 @@ const Home = () => {
         </div>
       </div>
       {/* job category section  */}
-      <JobCategory jobCategoryData={jobCategoryData}></JobCategory>
-
+      <JobCategory></JobCategory>
       <FeaturedJobs></FeaturedJobs>
     </div>
   )

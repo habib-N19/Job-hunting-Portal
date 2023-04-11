@@ -1,12 +1,18 @@
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 import Header from './components/Header/Header'
-import { Outlet } from 'react-router-dom'
-function App () {
+import { Outlet, useLoaderData } from 'react-router-dom'
+
+export const FeaturedContext = createContext([])
+const App = () => {
+  const { featuredData } = useLoaderData()
+  // console.log(featuredData)
   return (
-    <div className='App'>
-      <Header></Header>
-      <Outlet></Outlet>
-    </div>
+    <FeaturedContext.Provider value={featuredData}>
+      <div className='App'>
+        <Header></Header>
+        <Outlet></Outlet>
+      </div>
+    </FeaturedContext.Provider>
   )
 }
 

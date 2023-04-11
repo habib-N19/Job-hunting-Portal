@@ -1,7 +1,18 @@
-import React from 'react'
-
-const JobCategory = ({ jobCategoryData }) => {
+import React, { useEffect, useState } from 'react'
+// import { jobCategoryLoader } from '../../loaders/jobCategory'
+const JobCategory = () => {
   //   console.log(typeof jobCategories)
+  //   console.log(jobCategoryLoader)
+  const [jobCategoryData, setJobCategoryData] = useState([])
+  useEffect(() => {
+    const fetchJobData = async () => {
+      const res = await fetch('jobCategory.json')
+      const jobData = await res.json()
+      setJobCategoryData(jobData)
+    }
+    fetchJobData()
+  }, [])
+
   return (
     <div className='w-11/12 mx-auto'>
       <h2 className='text-2xl text-center mb-6'>Job Category List</h2>
@@ -19,7 +30,7 @@ const JobCategory = ({ jobCategoryData }) => {
             </div>
             <h4 className='text-1xl mt-8 mb-2'>{job.name}</h4>
             <p className='text-default-color'>
-              {job.jobsAvailable} Jobs Available
+              {job.jobsAvailable}+ Jobs Available
             </p>
           </div>
         ))}

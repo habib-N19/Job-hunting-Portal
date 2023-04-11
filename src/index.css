@@ -25,3 +25,9 @@ width: 200px;
 height: 200px;
 padding: 20px;
 }
+/* featured card styles */
+.my-featured-card{
+  border: 1px solid #E8E8E8;
+  border-radius: 8px;
+  padding-left: 40px;
+}

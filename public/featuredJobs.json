@@ -1,0 +1,110 @@
+[
+    {
+        "id": "1",
+        "companyLogo": "https://i.ibb.co/wY2vCQj/Career-Hub.png",
+        "jobTitle": "Technical Database Engineer",
+        "companyName": "Career Hub",
+        "remoteOrOnsite": "Remote",
+        "location": "New York",
+        "fulltimeOrPartTime": "Full-time",
+        "salary": "$90,000 - $120,000",
+        "jobDescription": "",
+        "jobResponsibility": "",
+        "educationalRequirements": "",
+        "experiences": "",
+        "contactInformation": {
+            "phone": "(123) 456-7890",
+            "email": "careerhub@example.com"
+        }
+    },
+    {
+        "id": "2",
+        "companyLogo": "https://i.ibb.co/v3w2V1P/google-1-1-1.png",
+        "jobTitle": "Senior Product Designer",
+        "companyName": "Google",
+        "remoteOrOnsite": "Onsite",
+        "location": "Mountain View, CA",
+        "fulltimeOrPartTime": "Full-time",
+        "salary": "$150,000 - $200,000",
+        "jobDescription": "",
+        "jobResponsibility": "",
+        "educationalRequirements": "",
+        "experiences": "",
+        "contactInformation": {
+            "phone": "(123) 456-7890",
+            "email": "google@example.com"
+        }
+    },
+    {
+        "id": "3",
+        "companyLogo": "https://i.ibb.co/brS0LRK/Group-10021.png",
+        "jobTitle": "Software Engineer",
+        "companyName": "Acme Corporation",
+        "remoteOrOnsite": "Onsite",
+        "location": "San Francisco, CA",
+        "fulltimeOrPartTime": "Full-time",
+        "salary": "$120,000 - $150,000",
+        "jobDescription": "",
+        "jobResponsibility": "",
+        "educationalRequirements": "",
+        "experiences": "",
+        "contactInformation": {
+            "phone": "(123) 456-7890",
+            "email": "acme@example.com"
+        }
+    },
+    {
+        "id": "4",
+        "companyLogo": "https://i.ibb.co/p2km7gm/netflix-4-1.png",
+        "jobTitle": "Front-end Developer",
+        "companyName": "Netflix",
+        "remoteOrOnsite": "Remote",
+        "location": "Los Gatos, CA",
+        "fulltimeOrPartTime": "Full-time",
+        "salary": "$120,000 - $150,000",
+        "jobDescription": "",
+        "jobResponsibility": "",
+        "educationalRequirements": "",
+        "experiences": "",
+        "contactInformation": {
+            "phone": "(123) 456-7890",
+            "email": "netflix@example.com"
+        }
+    },
+    {
+        "id": "",
+        "companyLogo": "https://i.ibb.co/LY86XN6/tesla-9-1.png",
+        "jobTitle": "Marketing Specialist",
+        "companyName": "ABC Corporation",
+        "remoteOrOnsite": "Remote",
+        "location": "New York",
+        "fulltimeOrPartTime": "Part-time",
+        "salary": "$50,000 - $70,000",
+        "jobDescription": "",
+        "jobResponsibility": "",
+        "educationalRequirements": "",
+        "experiences": "",
+        "contactInformation": {
+            "phone": "(123) 456-7890",
+            "email": "netflix@example.com"
+        }
+    },
+    {
+        "id": "6",
+        "companyLogo": "https://i.ibb.co/v3w2V1P/google-1-1-1.png",
+        "jobTitle": "Marketing Specialist",
+        "companyName": "ABC Corporation",
+        "remoteOrOnsite": "Remote",
+        "location": "New York",
+        "fulltimeOrPartTime": "Part-time",
+        "salary": "$50,000 - $70,000",
+        "jobDescription": "",
+        "jobResponsibility": "",
+        "educationalRequirements": "",
+        "experiences": "",
+        "contactInformation": {
+            "phone": "(123) 456-7890",
+            "email": "netflix@example.com"
+        }
+    }
+]
