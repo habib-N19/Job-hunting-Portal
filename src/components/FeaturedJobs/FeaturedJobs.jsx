@@ -24,7 +24,7 @@ const FeaturedJobs = () => {
         need. Its your future
       </p>
       {/* featured card  */}
-      <div className='grid grid-cols-2 gap-3'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
         {featuredData.slice(0, numToShow).map(fData => (
           <div key={fData.id} className='my-featured-card'>
             <div className='my-8'>
@@ -44,20 +44,20 @@ const FeaturedJobs = () => {
               </span>
             </div>
             {/* location */}
-            <div className='font-semibold text-[#757575] mb-6 mt-4'>
-              <span className='inline-flex mr-3'>
-                <MapPinIcon className='w-6 h-6 mr-1  stroke-[#757575] fill-none' />
-                {fData.location}
-              </span>
-              <span className='inline-flex ml-3'>
+            <div className='font-semibold flex flex-col sm:flex-row text-[#757575] mb-6 mt-4'>
+              <div className='sm:inline-flex mb-2'>
+                <MapPinIcon className='w-6 h-6 mr-1 inline-flex  stroke-[#757575] fill-none' />
+                <span>{fData.location}</span>
+              </div>
+              <div className='inline-flex'>
                 <CurrencyDollarIcon className='w-6 h-6 stroke-[#757575] fill-none' />
                 <span className='mr-2'>Salary: </span>
                 {fData.salary}
-              </span>
+              </div>
             </div>
             <button
               onClick={() => handleJobDetails(fData.id)}
-              className='my-btn-primary mb-8'
+              className='my-btn-primary mb-auto'
             >
               View Details
             </button>

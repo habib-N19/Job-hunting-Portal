@@ -1,5 +1,5 @@
 # b7a9-career-hub-habib-N19
-# Career Hub Portal
+# Job Hunting Portal
 
 ## A React Router SPA with highly interactive UI
 
