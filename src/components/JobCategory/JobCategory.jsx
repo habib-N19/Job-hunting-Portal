@@ -21,12 +21,16 @@ const JobCategory = () => {
         need. Its your future
       </p>
       {/* category cards */}
-      <div className='flex gap-4 w-11/12 mx-auto my-8'>
+      <div className='flex flex-col  sm:flex-row gap-4 w-11/12 mx-auto my-8'>
         {/* map through job categories and render a card for each */}
         {jobCategoryData.map(job => (
-          <div key={job.id} className='my-card'>
+          <div key={job.id} className='my-card w-11/12 mx-auto text-center'>
             <div>
-              <img className='w-[40px] h-[40px]' src={job.logo} alt='' />
+              <img
+                className='w-[40px] h-[40px] mx-auto'
+                src={job.logo}
+                alt=''
+              />
             </div>
             <h4 className='text-1xl mt-8 mb-2'>{job.name}</h4>
             <p className='text-default-color'>

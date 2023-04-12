@@ -1,14 +1,21 @@
+import React, { useState, useContext } from 'react'
 import { FeaturedContext } from '../../App'
-import React, { useContext } from 'react'
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
 import { useNavigate } from 'react-router-dom'
+
 const FeaturedJobs = () => {
   const featuredData = useContext(FeaturedContext)
   const navigate = useNavigate()
+  const [numToShow, setNumToShow] = useState(4)
+
   const handleJobDetails = id => {
     navigate(`/job/${id}`)
   }
-  //   console.log(typeof featuredData)
+
+  const handleSeeMore = () => {
+    setNumToShow(featuredData.length)
+  }
+
   return (
     <div className='w-11/12 mx-auto'>
       <h2 className='text-4xl text-center font-bold mb-4'>Featured Jobs</h2>
@@ -18,7 +25,7 @@ const FeaturedJobs = () => {
       </p>
       {/* featured card  */}
       <div className='grid grid-cols-2 gap-3'>
-        {featuredData.map(fData => (
+        {featuredData.slice(0, numToShow).map(fData => (
           <div key={fData.id} className='my-featured-card'>
             <div className='my-8'>
               <img className='w-[100px] ' src={fData.companyLogo} alt='' />
@@ -56,6 +63,13 @@ const FeaturedJobs = () => {
             </button>
           </div>
         ))}
+      </div>
+      <div className='text-center my-16'>
+        {numToShow < featuredData.length && (
+          <button onClick={handleSeeMore} className='my-btn-primary'>
+            See More
+          </button>
+        )}
       </div>
     </div>
   )

@@ -13,7 +13,7 @@ const AppliedJob = () => {
     matchedData.push(foundJobId)
   }
   const [filterData, setFilter] = useState(matchedData)
-  const [selectedValue, setSelectedValue] = useState(null)
+  const [selectedValue, setSelectedValue] = useState('')
 
   const handleFilterChange = event => {
     setSelectedValue(event.target.value)
@@ -39,7 +39,7 @@ const AppliedJob = () => {
           value={selectedValue}
           onChange={handleFilterChange}
         >
-          <option value='' selected disabled>
+          <option value='' disabled>
             Filter By
           </option>
           <option value=''>See All</option>
