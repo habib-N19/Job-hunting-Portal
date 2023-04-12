@@ -3,9 +3,9 @@ import React from 'react'
 const Blog = () => {
   return (
     <div className='w-10/12 mx-auto'>
-      <div className=''>
+      <div className='my-6 border shadow-lg p-6 pb-2 leading-relaxed'>
         <span className='font-bold'>When you should use Context Api? </span>
-        <p>
+        <p className='my-3 text-default-color'>
           Context Api is a helpful way of avoiding props drilling. If the passed
           data is used by a whole lot of components and minimal changes are made
           in the state then we should use Context api. But we should avoid using
@@ -15,12 +15,12 @@ const Blog = () => {
           just use context in shop and product details page will get the data
           easily. If the data is getting passed to a far component then we
           should use context but other than a complex object and farther props
-          drilling we should not use Context Api
+          drilling we should not use Context Api.
         </p>
       </div>
-      <div>
+      <div className='my-6 border shadow-lg p-6 pb-2 leading-relaxed'>
         <span className='font-bold'>What is a custom hook?</span>
-        <p>
+        <p className='my-3 text-default-color'>
           A custom hook is a javascript function that can operate like a hook.
           We can use a custom hook in multiple components so we don't have to
           rewrite similar codes in each component. If we need to fetch data in
@@ -30,9 +30,9 @@ const Blog = () => {
           just one use of a custom hook.
         </p>
       </div>
-      <div>
+      <div className='my-6 border shadow-lg p-6 pb-2 leading-relaxed'>
         <span className='font-bold'>What is useRef?</span>
-        <p>
+        <p className='my-3 text-default-color'>
           useRef is built in react hook. It can access dom element and it also
           can show a previous data without re-rendering. When we use useState,
           it is an asynchronous operation. Data will render first and then we
@@ -42,9 +42,9 @@ const Blog = () => {
           changes, how many times a button is clicked.
         </p>
       </div>
-      <div>
+      <div className='my-6 border shadow-lg p-6 pb-2 leading-relaxed'>
         <span className='font-bold'>What is useMemo?</span>
-        <p>
+        <p className='my-3 text-default-color'>
           We can call useMemo hook as a caching mechanism. Let's say we have a
           component where we have declared a state and done some mathematical
           calculations. Let's say we also have another state that stores some

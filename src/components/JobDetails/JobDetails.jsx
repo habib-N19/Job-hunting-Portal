@@ -1,4 +1,6 @@
 import React from 'react'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { useLoaderData } from 'react-router-dom'
 import {
   MapPinIcon,
@@ -7,9 +9,11 @@ import {
   PhoneIcon,
   EnvelopeIcon
 } from '@heroicons/react/24/solid'
+import { addToDb } from '../../utils/fakeDb'
 const JobDetails = () => {
   const jobDetails = useLoaderData()
   const {
+    id,
     jobTitle,
     jobDescription,
     jobResponsibility,
@@ -19,7 +23,12 @@ const JobDetails = () => {
     location,
     contactInformation
   } = jobDetails
-
+  // adding it do local storage
+  const handleAppliedJob = id => {
+    console.log(id)
+    toast.success('Successfully Applied for the Job!')
+    addToDb(id)
+  }
   return (
     <div className='grid grid-cols-4 gap-4 w-10/12 mx-auto'>
       {/* details */}
@@ -83,8 +92,14 @@ const JobDetails = () => {
             </div>
           </div>
         </div>
-        <button className='my-btn-primary w-full my-8'>Apply Now</button>
+        <button
+          onClick={() => handleAppliedJob(id)}
+          className='my-btn-primary w-full my-8'
+        >
+          Apply Now
+        </button>
       </div>
+      <ToastContainer />
     </div>
   )
 }

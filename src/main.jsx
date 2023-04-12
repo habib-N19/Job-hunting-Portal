@@ -9,12 +9,13 @@ import AppliedJob from './components/AppliedJob/AppliedJob'
 import Blog from './components/Blog/Blog'
 import { featuredCardData } from './loaders/getFeaturedData'
 import JobDetails from './components/JobDetails/JobDetails'
+import ErrorPage from './components/ErrorPage/ErrorPage'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App></App>,
-    errorElement: <p>404 not found</p>,
+    errorElement: <ErrorPage />,
     loader: featuredCardData,
     children: [
       {
