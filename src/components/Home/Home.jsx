@@ -12,7 +12,7 @@ const Home = () => {
         <div className=' order-last sm:order-first'>
           <h1 className='text-5xl sm:3xl md:4xl font-bold mb-4'>
             Closer step to your dream job.Keep moving
-            <span class='animate-text bg-gradient-to-r from-blue-500 via-red-500 to-cyan-500 bg-clip-text  font-black text-transparent'>
+            <span className='animate-text bg-gradient-to-r from-blue-500 via-red-500 to-cyan-500 bg-clip-text  font-black text-transparent'>
               {' '}
               Forward
             </span>

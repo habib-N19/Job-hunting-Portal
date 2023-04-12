@@ -19,7 +19,7 @@ const BannerImage = () => {
         src={bannerImg1}
         alt=''
       />
-      <p className='text-center font-bold'>HI</p>
+      <p className='text-center font-bold'></p>
     </div>
   )
 }

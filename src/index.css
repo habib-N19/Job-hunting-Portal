@@ -25,6 +25,10 @@
   padding: 10px 20px;
 }
 
+.my-btn-primary:hover {
+  background: linear-gradient(90deg, #4a5ee2 0%, #9c7df1 100%);
+}
+
 .default {
   @apply font-semibold tracking-wide text-default-color transition-colors duration-200
 }

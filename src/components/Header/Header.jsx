@@ -5,26 +5,55 @@ import BannerImage from '../BannerImage/BannerImage'
 const Header = () => {
   const location = useLocation()
   return (
-    <div div className='banner w-11/12 mx-auto mb-8'>
+    <div className='banner w-11/12 mx-auto mb-8'>
       <div className=' relative flex my-6 items-center justify-between w-11/12 mx-auto z-20'>
         <NavLink to='/'>
-          <h1 class=' animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-3xl sm:2xl font-black text-transparent'>
+          <h1 className=' animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-3xl sm:2xl font-black text-transparent'>
             Job Hunting Portal
           </h1>
         </NavLink>
         <ul className='inline-flex gap-4 ml-4 font-semibold '>
           {/* not rendering home icon in home */}
           {location.pathname !== '/' && (
-            <NavLink className='actives' to='/'>
+            <NavLink
+              className={
+                location.pathname === '/' ? 'text-blue-500' : 'text-gray-500'
+              }
+              to='/'
+            >
               Home
             </NavLink>
           )}
 
-          <NavLink className='default' to='/statistics' title='statistics'>
+          <NavLink
+            className={
+              location.pathname === '/statistics'
+                ? 'text-blue-500'
+                : 'text-gray-500'
+            }
+            to='/statistics'
+            title='statistics'
+          >
             Statistics
           </NavLink>
-          <NavLink to='/appliedJob'>Applied Job</NavLink>
-          <NavLink to='/blog'>Blog</NavLink>
+          <NavLink
+            className={
+              location.pathname === '/appliedJob'
+                ? 'text-blue-500'
+                : 'text-gray-500'
+            }
+            to='/appliedJob'
+          >
+            Applied Job
+          </NavLink>
+          <NavLink
+            className={
+              location.pathname === '/blog' ? 'text-blue-500' : 'text-gray-500'
+            }
+            to='/blog'
+          >
+            Blog
+          </NavLink>
         </ul>
         <NavLink to='/'>
           <button className='my-btn-primary hidden sm:block'>

@@ -27,8 +27,8 @@ const FeaturedJobs = () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
         {featuredData.slice(0, numToShow).map(fData => (
           <div key={fData.id} className='my-featured-card'>
-            <div className='my-8'>
-              <img className='w-[100px] ' src={fData.companyLogo} alt='' />
+            <div className='my-8 w-[120px]'>
+              <img className='w-[120px] ' src={fData.companyLogo} alt='' />
             </div>
             <h2 className='text-lg mb-2 font-bold text-[#474747]'>
               {fData.jobTitle}
@@ -55,12 +55,14 @@ const FeaturedJobs = () => {
                 {fData.salary}
               </div>
             </div>
-            <button
-              onClick={() => handleJobDetails(fData.id)}
-              className='my-btn-primary mb-auto'
-            >
-              View Details
-            </button>
+            <div className='mt-auto mb-4'>
+              <button
+                onClick={() => handleJobDetails(fData.id)}
+                className='my-btn-primary'
+              >
+                View Details
+              </button>
+            </div>
           </div>
         ))}
       </div>
