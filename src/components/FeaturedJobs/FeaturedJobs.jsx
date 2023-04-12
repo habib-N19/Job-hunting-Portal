@@ -43,7 +43,7 @@ const FeaturedJobs = () => {
                 {fData.location}
               </span>
               <span className='inline-flex ml-3'>
-                <CurrencyDollarIcon className='w-6 h-6 stroke-[#757575] fill-none' />{' '}
+                <CurrencyDollarIcon className='w-6 h-6 stroke-[#757575] fill-none' />
                 <span className='mr-2'>Salary: </span>
                 {fData.salary}
               </span>
