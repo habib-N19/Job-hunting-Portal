@@ -11,5 +11,6 @@ Welcome to Career Hub Portal, a single-page application built with React Router 
  
 ## Take a look at the site
 
-You can find the Career Hub Portal online at [https://marvelous-starburst-529e82.netlify.app/](your-site-link-here). Check it out and let us know what you think!
+You can find the Career Hub Portal online at [https://marvelous-starburst-529e82.netlify.app/](https://marvelous-starburst-529e82.netlify.app/). Check it out and let us know what you think!
+
 
